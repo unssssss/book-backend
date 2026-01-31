@@ -28,11 +28,9 @@ CRUD :
 1. folder structure:
 
 - MIDDLEWARE:
-
   - auth.js: konfirmasi jwt (json web token)
 
 - MODELS:
-
   - Book.js: template untuk suatu buku (nama, deskripsi, id category, id user, jumlah, harga, waktu upload)
 
   - Category.js: template untuk suatu kategori (name, deskripsi, id user, warna, aktif/tidak)
@@ -56,4 +54,4 @@ router.put: memperbarui data yang sudah ada di server
    --> program mulai dari buat folder backend -> node install (untuk install environment backend)
    --> install library (npm i bcrypt cors dotenv express jsonwebtoken mongoose)
 
-mongoose: database
+mongoose: database noSQL
