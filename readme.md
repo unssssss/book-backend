@@ -30,12 +30,15 @@ CRUD :
 - MIDDLEWARE:
   - auth.js: konfirmasi jwt (json web token)
 
-- MODELS:
+
+- MODELS:(untuk interaksi dengan database)
+  
   - Book.js: template untuk suatu buku (nama, deskripsi, id category, id user, jumlah, harga, waktu upload)
 
   - Category.js: template untuk suatu kategori (name, deskripsi, id user, warna, aktif/tidak)
 
   - User.js: template untuk user (nama, password, waktu pembuatan)
+
 
 - ROUTES: (ada router.get [ada juga router.get("/:id") untuk mengambil id], router.post, router.put, router.delete)
 
@@ -43,12 +46,19 @@ router.get: mengambil semua item/isi
 router.get("/:id"): mengambil 1 item/isi
 router.post: membuat/mengupload suatu hal
 router.put: memperbarui data yang sudah ada di server
+router.delete
+
+  users.js:mengambil(get), post(membuat), delete(menghapus) user
+  
+  books.js:mengambil, mengambil dengan id, membuat, mengupdate, menghapus buku
+  
+  categories.js:mengambil, mengambil dengan id, membuat, mengupdate, menghapus categori
 
 2. files:
 
-- server.js:
-- .env:
-- package.json:
+- server.js: membuat koneksi aktif ke data MongoDB
+- .env:menyimpan kunci API, username & password, token, dll
+- package.json: File ini berfungsi sebagai "kartu identitas" untuk proyek, sangat penting untuk menggunakan CLI npm (Node Package Manager), dan memastikan konsistensi di berbagai lingkungan pengembangan. 
 
 3. installation:
    --> program mulai dari buat folder backend -> node install (untuk install environment backend)
