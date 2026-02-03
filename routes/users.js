@@ -89,7 +89,8 @@ router.get("/me", auth, async (req, res) => {
   }
 });
 
-// Delete user account
+
+//////////////////////////////////////////DELETE USER/////////////////////////////////////////
 router.delete("/me", auth, async (req, res) => {
   try {
     console.log("Deleting user:", req.user.id);
