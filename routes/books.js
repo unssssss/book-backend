@@ -59,16 +59,7 @@ router.get("/:id", auth, async (req, res) => {
 
 router.post("/", auth, async (req, res) => {
   try {
-    console.log("creating book for user:", req.user.id);
-    console.log("Request body:", req.body); // ADD THIS
-    console.log("Request headers:", req.headers); // ADD THIS
-
     const { name, description, categoryId, quantity } = req.body;
-
-    console.log("Extracted values:"); // ADD THIS
-    console.log("name:", name);
-    console.log("categoryId:", categoryId);
-    console.log("quantity:", quantity);
 
     if (!name || !categoryId || quantity == null) {
       return res.status(400).json({
